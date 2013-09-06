@@ -8,10 +8,6 @@ gem 'rails', '4.0.0'
 gem 'mysql2'
 gem 'paperclip'
 gem 'therubyracer'
-gem 'twitter-bootstrap-rails', '2.2.7'
-gem 'will_paginate', '3.0.4'
-gem 'will_paginate-bootstrap', '0.2.3'
-gem "net-ssh", "~> 2.4.0"
 
 
 # Use SCSS for stylesheets
