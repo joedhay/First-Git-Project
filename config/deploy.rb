@@ -5,15 +5,15 @@ set :scm, :git # You can set :scm explicitly or Capistrano will make an intellig
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 
-set :user, "joedhay"
+#set :user, "joedhay"
 #set :use_sudo, false
-set :deploy_to, "192.168.1.101/var/www/#{application}"
+set :deploy_to, "/var/www/#{application}"
 set :deploy_via, :remote_cache
 
 
-role :web, "192.168.1.101/var/www/First-Git-Project"                          # Your HTTP server, Apache/etc
-role :app, "192.168.1.101/var/www/First-Git-Project"                          # This may be the same as your `Web` server
-role :db,  "192.168.1.101/var/www/First-Git-Project", :primary => true # This is where Rails migrations will run
+role :web, "First-Git-Project"                          # Your HTTP server, Apache/etc
+role :app, "First-Git-Project"                          # This may be the same as your `Web` server
+role :db,  "First-Git-Project", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 
 # if you want to clean up old releases on each deploy uncomment this:
