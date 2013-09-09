@@ -5,8 +5,8 @@ set :scm, :git # You can set :scm explicitly or Capistrano will make an intellig
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 
-#set :user, "joedhay"
-#set :use_sudo, false
+set :user, "joedhay"
+set :use_sudo, false
 set :deploy_to, "/var/www/#{application}"
 set :deploy_via, :remote_cache
 
@@ -28,13 +28,15 @@ role :db,  "192.168.1.101", :primary => true # This is where Rails migrations wi
 #after "deploy:bundle_gems", "deploy:restart"
 
 namespace :deploy do
+=begin
    task :bundle_gems do
       run "cd #{deploy_to}/current && bundle install vendor/gems"
    end
+=end
 
    task :start do ; end
    task :stop do ; end
    task :restart, :roles => :app, :except => { :no_release => true } do
-     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+     run " touch #{File.join(current_path,'tmp','restart.txt')}"
    end
  end
