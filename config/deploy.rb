@@ -24,15 +24,15 @@ role :db,  "192.168.1.101", :primary => true # This is where Rails migrations wi
 
 # If you are using Passenger mod_rails uncomment this:
 
-#after "deploy", "deploy:bundle_gems"
-#after "deploy:bundle_gems", "deploy:restart"
+after "deploy", "deploy:bundle_gems"
+after "deploy:bundle_gems", "deploy:restart"
 
 namespace :deploy do
-=begin
+
    task :bundle_gems do
       run "cd #{deploy_to}/current && bundle install vendor/gems"
    end
-=end
+
 
    task :start do ; end
    task :stop do ; end
