@@ -15,6 +15,10 @@ gem 'will_paginate', '3.0.4'
 gem 'will_paginate-bootstrap', '0.2.3'
 gem "net-ssh", "~> 2.4.0"
 
+group :development do
+  gem 'capistrano'
+end
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
