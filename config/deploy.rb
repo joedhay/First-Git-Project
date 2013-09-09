@@ -5,7 +5,7 @@ set :scm, :git # You can set :scm explicitly or Capistrano will make an intellig
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 
-set :user, "joedhay"
+set :user, "root"
 set :use_sudo, false
 set :deploy_to, "/var/www/#{application}"
 set :deploy_via, :remote_cache
