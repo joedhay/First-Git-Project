@@ -11,9 +11,9 @@ set :deploy_to, "/var/www/#{application}"
 set :deploy_via, :remote_cache
 
 
-#role :web, "First-Git-Project"                          # Your HTTP server, Apache/etc
-#role :app, "First-Git-Project"                          # This may be the same as your `Web` server
-#role :db,  "First-Git-Project", :primary => true # This is where Rails migrations will run
+role :web, "First-Git-Project"                          # Your HTTP server, Apache/etc
+role :app, "First-Git-Project"                          # This may be the same as your `Web` server
+role :db,  "First-Git-Project", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 
 # if you want to clean up old releases on each deploy uncomment this:
@@ -24,8 +24,8 @@ set :deploy_via, :remote_cache
 
 # If you are using Passenger mod_rails uncomment this:
 
-after "deploy", "deploy:bundle_gems"
-after "deploy:bundle_gems", "deploy:restart"
+#after "deploy", "deploy:bundle_gems"
+#after "deploy:bundle_gems", "deploy:restart"
 
 namespace :deploy do
    task :bundle_gems do
